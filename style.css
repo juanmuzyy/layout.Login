@@ -1,0 +1,86 @@
+html{
+    margin: 0;
+    padding: 0;
+     height: 100%;
+}
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url("./fundo.gif");
+    background-color: rgba(255, 255, 255, 0.2); /* Cor semitransparente */
+    backdrop-filter: blur(10px); /* Aplica o efeito de desfoque */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-container {
+  border: 1px solid black;
+  width: 400px;
+  height: 500px;
+  background-image: url("./login.gif");
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+#loginForm{
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    backdrop-filter: brigtness(40%);
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+}
+h2{
+    font-weight: 5rem;
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 0px opx 2px rgba(0,0,0,0.5);
+    margin-bottom: 60px;
+}
+h5{
+
+    font-weight: 5rem;
+    text-align: center;
+    font-size: 14px;
+    text-shadow: 0px opx 2px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+label{
+    color: white;
+    text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+input{
+    background: rgba(255,255,255,0.3);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+}
+button{
+    background: rgb(45,126,231);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    border: none;
+    margin: 10px 0px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    color:white;
+
+}
+.error {
+    color: red;
+    font-size: 12px;
+}

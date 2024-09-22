@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   
+</head>
+<link rel="stylesheet" href="CSS/style.css">   
+<body>
+
+<div class="login-container">
+    <h2>Login
+        <h5>Bem Vindo(a) a era da Tecnologia</h5>
+    </h2>
+    <form id="loginForm">
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+            <div class="error" id="emailError"></div>
+        </div>
+        <div>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required>
+            <div class="error" id="passwordError"></div>
+        </div>
+        <button type="submit">Entrar</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+
+        // Limpa as mensagens de erro
+        emailError.textContent = '';
+        passwordError.textContent = '';
+
+        let hasError = false;
+
+        // Validação simples
+        if (!email) {
+            emailError.textContent = 'E-mail é obrigatório';
+            hasError = true;
+        }
+
+        if (!password) {
+            passwordError.textContent = 'Senha é obrigatória';
+            hasError = true;
+        }
+
+        if (!hasError) {
+            console.log('Dados do Login:', { email, password });
+            // Aqui você pode fazer a chamada para sua API de login
+
+            
+        }
+    });
+</script>
+
+</body>
+</html>
